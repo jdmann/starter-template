@@ -1,0 +1,21 @@
+{
+  "name": "starter-template",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\""
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.0.0",
+    "prettier": "^3.3.3",
+    "turbo": "^2.0.0"
+  },
+  "packageManager": "pnpm@9.5.0"
+}
