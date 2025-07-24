@@ -19,7 +19,7 @@ const badgeStyles = {
   },
 };
 
-export const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
+export const BadgeRoot = React.forwardRef<HTMLDivElement, BadgeProps>(
   ({ className, variant = "default", ...props }, ref) => {
     return (
       <ark.div
@@ -34,4 +34,4 @@ export const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
     );
   }
 );
-Badge.displayName = "Badge";
+BadgeRoot.displayName = "BadgeRoot";

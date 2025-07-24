@@ -2,7 +2,7 @@ import { ark } from "@ark-ui/react/factory";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Label = React.forwardRef<
+export const LabelRoot = React.forwardRef<
   HTMLLabelElement,
   React.ComponentPropsWithoutRef<typeof ark.label>
 >(({ className, ...props }, ref) => (
@@ -15,4 +15,4 @@ export const Label = React.forwardRef<
     {...props}
   />
 ));
-Label.displayName = "Label";
+LabelRoot.displayName = "LabelRoot";

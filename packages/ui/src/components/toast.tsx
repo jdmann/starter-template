@@ -1,6 +1,6 @@
 import { Toast as ArkToast } from "@ark-ui/react/toast";
 
-export const Toast = ArkToast.Root;
+export const ToastRoot = ArkToast.Root;
 export const ToastTitle = ArkToast.Title;
 export const ToastDescription = ArkToast.Description;
 export const ToastAction = ArkToast.ActionTrigger;

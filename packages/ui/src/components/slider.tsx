@@ -2,7 +2,7 @@ import { Slider as ArkSlider } from "@ark-ui/react/slider";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Slider = React.forwardRef<
+export const SliderRoot = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ArkSlider.Root>
 >(({ className, ...props }, ref) => (
@@ -27,4 +27,4 @@ export const Slider = React.forwardRef<
     </ArkSlider.Control>
   </ArkSlider.Root>
 ));
-Slider.displayName = "Slider";
+SliderRoot.displayName = "SliderRoot";

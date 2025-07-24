@@ -1,21 +1,21 @@
-import { ark } from '@ark-ui/react/factory'
-import * as React from 'react'
-import { cn } from '../lib/utils'
+import { ark } from "@ark-ui/react/factory";
+import * as React from "react";
+import { cn } from "../lib/utils";
 
-export const Card = React.forwardRef<
+export const CardRoot = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ark.div>
 >(({ className, ...props }, ref) => (
   <ark.div
     ref={ref}
     className={cn(
-      'rounded-lg border border-gray-200 bg-white text-gray-950 shadow-sm',
+      "rounded-lg border border-gray-200 bg-white text-gray-950 shadow-sm",
       className
     )}
     {...props}
   />
-))
-Card.displayName = 'Card'
+));
+CardRoot.displayName = "CardRoot";
 
 export const CardHeader = React.forwardRef<
   HTMLDivElement,
@@ -23,11 +23,11 @@ export const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ark.div
     ref={ref}
-    className={cn('flex flex-col space-y-1.5 p-6', className)}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />
-))
-CardHeader.displayName = 'CardHeader'
+));
+CardHeader.displayName = "CardHeader";
 
 export const CardTitle = React.forwardRef<
   HTMLHeadingElement,
@@ -35,11 +35,14 @@ export const CardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ark.h3
     ref={ref}
-    className={cn('text-2xl font-semibold leading-none tracking-tight', className)}
+    className={cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    )}
     {...props}
   />
-))
-CardTitle.displayName = 'CardTitle'
+));
+CardTitle.displayName = "CardTitle";
 
 export const CardDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -47,19 +50,19 @@ export const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ark.p
     ref={ref}
-    className={cn('text-sm text-gray-500', className)}
+    className={cn("text-sm text-gray-500", className)}
     {...props}
   />
-))
-CardDescription.displayName = 'CardDescription'
+));
+CardDescription.displayName = "CardDescription";
 
 export const CardContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ark.div>
 >(({ className, ...props }, ref) => (
-  <ark.div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
-))
-CardContent.displayName = 'CardContent'
+  <ark.div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+));
+CardContent.displayName = "CardContent";
 
 export const CardFooter = React.forwardRef<
   HTMLDivElement,
@@ -67,8 +70,8 @@ export const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ark.div
     ref={ref}
-    className={cn('flex items-center p-6 pt-0', className)}
+    className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />
-))
-CardFooter.displayName = 'CardFooter'
+));
+CardFooter.displayName = "CardFooter";

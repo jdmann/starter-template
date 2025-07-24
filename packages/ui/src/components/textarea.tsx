@@ -2,7 +2,7 @@ import { ark } from "@ark-ui/react/factory";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Textarea = React.forwardRef<
+export const TextareaRoot = React.forwardRef<
   HTMLTextAreaElement,
   React.ComponentPropsWithoutRef<typeof ark.textarea>
 >(({ className, ...props }, ref) => {
@@ -17,4 +17,4 @@ export const Textarea = React.forwardRef<
     />
   );
 });
-Textarea.displayName = "Textarea";
+TextareaRoot.displayName = "TextareaRoot";

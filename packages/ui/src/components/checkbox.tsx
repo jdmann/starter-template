@@ -2,7 +2,7 @@ import { Checkbox as ArkCheckbox } from "@ark-ui/react/checkbox";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Checkbox = React.forwardRef<
+export const CheckboxRoot = React.forwardRef<
   HTMLLabelElement,
   React.ComponentPropsWithoutRef<typeof ArkCheckbox.Root>
 >(({ className, ...props }, ref) => (
@@ -46,4 +46,4 @@ export const Checkbox = React.forwardRef<
     <ArkCheckbox.HiddenInput />
   </ArkCheckbox.Root>
 ));
-Checkbox.displayName = "Checkbox";
+CheckboxRoot.displayName = "CheckboxRoot";

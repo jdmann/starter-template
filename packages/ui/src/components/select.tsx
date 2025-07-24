@@ -3,13 +3,13 @@ import { Select as ArkSelect } from "@ark-ui/react/select";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Select = React.forwardRef<
+export const SelectRoot = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ArkSelect.Root>
 >(({ className, ...props }, ref) => (
   <ArkSelect.Root ref={ref} className={className} {...props} />
 ));
-Select.displayName = "Select";
+SelectRoot.displayName = "SelectRoot";
 
 export const SelectTrigger = React.forwardRef<
   HTMLButtonElement,

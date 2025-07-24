@@ -2,7 +2,7 @@ import { Progress as ArkProgress } from "@ark-ui/react/progress";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Progress = React.forwardRef<
+export const ProgressRoot = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ArkProgress.Root>
 >(({ className, ...props }, ref) => (
@@ -19,4 +19,4 @@ export const Progress = React.forwardRef<
     </ArkProgress.Track>
   </ArkProgress.Root>
 ));
-Progress.displayName = "Progress";
+ProgressRoot.displayName = "ProgressRoot";

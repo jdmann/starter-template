@@ -7,7 +7,7 @@ export interface InputProps
   type?: string;
 }
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+export const InputRoot = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     return (
       <ark.input
@@ -22,4 +22,4 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     );
   }
 );
-Input.displayName = "Input";
+InputRoot.displayName = "InputRoot";

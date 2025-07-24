@@ -1,18 +1,14 @@
-import { Accordion as ArkAccordion } from '@ark-ui/react/accordion'
-import * as React from 'react'
-import { cn } from '../lib/utils'
+import { Accordion as ArkAccordion } from "@ark-ui/react/accordion";
+import * as React from "react";
+import { cn } from "../lib/utils";
 
-export const Accordion = React.forwardRef<
+export const AccordionRoot = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ArkAccordion.Root>
 >(({ className, ...props }, ref) => (
-  <ArkAccordion.Root
-    ref={ref}
-    className={cn('w-full', className)}
-    {...props}
-  />
-))
-Accordion.displayName = 'Accordion'
+  <ArkAccordion.Root ref={ref} className={cn("w-full", className)} {...props} />
+));
+AccordionRoot.displayName = "AccordionRoot";
 
 export const AccordionItem = React.forwardRef<
   HTMLDivElement,
@@ -20,11 +16,11 @@ export const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ArkAccordion.Item
     ref={ref}
-    className={cn('border-b', className)}
+    className={cn("border-b", className)}
     {...props}
   />
-))
-AccordionItem.displayName = 'AccordionItem'
+));
+AccordionItem.displayName = "AccordionItem";
 
 export const AccordionTrigger = React.forwardRef<
   HTMLButtonElement,
@@ -33,7 +29,7 @@ export const AccordionTrigger = React.forwardRef<
   <ArkAccordion.ItemTrigger
     ref={ref}
     className={cn(
-      'flex w-full items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
+      "flex w-full items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
       className
     )}
     {...props}
@@ -55,8 +51,8 @@ export const AccordionTrigger = React.forwardRef<
       />
     </svg>
   </ArkAccordion.ItemTrigger>
-))
-AccordionTrigger.displayName = 'AccordionTrigger'
+));
+AccordionTrigger.displayName = "AccordionTrigger";
 
 export const AccordionContent = React.forwardRef<
   HTMLDivElement,
@@ -65,12 +61,14 @@ export const AccordionContent = React.forwardRef<
   <ArkAccordion.ItemContent
     ref={ref}
     className={cn(
-      'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+      "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
       className
     )}
     {...props}
   >
     <div className="pb-4 pt-0">{props.children}</div>
   </ArkAccordion.ItemContent>
-))
-AccordionContent.displayName = 'AccordionContent'
+));
+AccordionContent.displayName = "AccordionContent";
+
+// Remove the Accordion namespace export from this file for best practice Fast Refresh compatibility

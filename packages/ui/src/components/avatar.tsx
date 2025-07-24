@@ -2,7 +2,7 @@ import { Avatar as ArkAvatar } from "@ark-ui/react/avatar";
 import * as React from "react";
 import { cn } from "../lib/utils";
 
-export const Avatar = React.forwardRef<
+export const AvatarRoot = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof ArkAvatar.Root>
 >(({ className, ...props }, ref) => (
@@ -15,7 +15,7 @@ export const Avatar = React.forwardRef<
     {...props}
   />
 ));
-Avatar.displayName = "Avatar";
+AvatarRoot.displayName = "AvatarRoot";
 
 export const AvatarImage = React.forwardRef<
   HTMLImageElement,

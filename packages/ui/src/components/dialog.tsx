@@ -1,23 +1,19 @@
-import { Dialog as ArkDialog } from '@ark-ui/react/dialog'
-import { Portal } from '@ark-ui/react/portal'
-import * as React from 'react'
-import { cn } from '../lib/utils'
+import { Dialog as ArkDialog } from "@ark-ui/react/dialog";
+import { Portal } from "@ark-ui/react/portal";
+import * as React from "react";
+import { cn } from "../lib/utils";
 
-export const Dialog = ArkDialog.Root
+export const DialogRoot = ArkDialog.Root;
 
 export const DialogTrigger = React.forwardRef<
   HTMLButtonElement,
   React.ComponentPropsWithoutRef<typeof ArkDialog.Trigger>
 >(({ className, ...props }, ref) => (
-  <ArkDialog.Trigger
-    ref={ref}
-    className={cn(className)}
-    {...props}
-  />
-))
-DialogTrigger.displayName = 'DialogTrigger'
+  <ArkDialog.Trigger ref={ref} className={cn(className)} {...props} />
+));
+DialogTrigger.displayName = "DialogTrigger";
 
-export const DialogPortal = Portal
+export const DialogPortal = Portal;
 
 export const DialogBackdrop = React.forwardRef<
   HTMLDivElement,
@@ -26,13 +22,13 @@ export const DialogBackdrop = React.forwardRef<
   <ArkDialog.Backdrop
     ref={ref}
     className={cn(
-      'fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      "fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
   />
-))
-DialogBackdrop.displayName = 'DialogBackdrop'
+));
+DialogBackdrop.displayName = "DialogBackdrop";
 
 export const DialogContent = React.forwardRef<
   HTMLDivElement,
@@ -42,7 +38,7 @@ export const DialogContent = React.forwardRef<
     <ArkDialog.Content
       ref={ref}
       className={cn(
-        'relative w-full max-w-lg rounded-lg bg-white p-6 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
+        "relative w-full max-w-lg rounded-lg bg-white p-6 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
         className
       )}
       {...props}
@@ -50,8 +46,8 @@ export const DialogContent = React.forwardRef<
       {children}
     </ArkDialog.Content>
   </ArkDialog.Positioner>
-))
-DialogContent.displayName = 'DialogContent'
+));
+DialogContent.displayName = "DialogContent";
 
 export const DialogTitle = React.forwardRef<
   HTMLHeadingElement,
@@ -59,11 +55,11 @@ export const DialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ArkDialog.Title
     ref={ref}
-    className={cn('text-lg font-semibold', className)}
+    className={cn("text-lg font-semibold", className)}
     {...props}
   />
-))
-DialogTitle.displayName = 'DialogTitle'
+));
+DialogTitle.displayName = "DialogTitle";
 
 export const DialogDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -71,11 +67,11 @@ export const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ArkDialog.Description
     ref={ref}
-    className={cn('text-sm text-gray-500', className)}
+    className={cn("text-sm text-gray-500", className)}
     {...props}
   />
-))
-DialogDescription.displayName = 'DialogDescription'
+));
+DialogDescription.displayName = "DialogDescription";
 
 export const DialogClose = React.forwardRef<
   HTMLButtonElement,
@@ -84,7 +80,7 @@ export const DialogClose = React.forwardRef<
   <ArkDialog.CloseTrigger
     ref={ref}
     className={cn(
-      'absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-gray-100',
+      "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-gray-100",
       className
     )}
     {...props}
@@ -105,5 +101,5 @@ export const DialogClose = React.forwardRef<
       />
     </svg>
   </ArkDialog.CloseTrigger>
-))
-DialogClose.displayName = 'DialogClose'
+));
+DialogClose.displayName = "DialogClose";
